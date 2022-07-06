@@ -6,11 +6,11 @@ import (
 	"math/rand"
 )
 
-func main() {
+func getRandomNumbers(maxLength, maxNumber int) []int {
 	var numbers []int
 	// 난수 생성
-	for i := 0; i < 5000; i++ {
-		num := rand.Intn(50000)
+	for i := 0; i < maxLength; i++ {
+		num := rand.Intn(maxNumber)
 		if num == 0 {
 			continue
 		}
@@ -18,9 +18,13 @@ func main() {
 		numbers = append(numbers, num)
 	}
 
-	fmt.Print("duplicate numbers: [")
-	result := list.GetDuplicatedNumbers(numbers)
+	return numbers
+}
+
+func printDuplicateNumbers(result []string) {
 	l := len(result)
+
+	fmt.Print("duplicate numbers: [")
 	for i, v := range result {
 		fmt.Print(v)
 		if i == l-1 {
@@ -29,4 +33,11 @@ func main() {
 		fmt.Print(", ")
 	}
 	fmt.Println("]")
+}
+
+func main() {
+	numbers := getRandomNumbers(5000, 50000)
+	result := list.GetDuplicatedNumbers(numbers)
+
+	printDuplicateNumbers(result)
 }
