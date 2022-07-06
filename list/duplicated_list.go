@@ -5,8 +5,8 @@ import (
 	"fmt"
 )
 
-// GetDuplicateNumber 중복된 숫자와 중복된 횟수를 문자열로 담아 반환하는 함수
-func GetDuplicateNumber(numbers []int) []string {
+// GetDuplicatedNumbers 중복된 숫자와 중복된 횟수를 문자열로 담아 반환하는 함수
+func GetDuplicatedNumbers(numbers []int) []string {
 	// numberMap 은 입력받은 숫자 배열을 map으로 변환하고 중복된 횟수만큼 value 값을 높인다.
 	numberMap := make(map[int]int)
 	// result 는 중복된 숫자와 1회 이상의 중복 횟수를 문자열로 변환해서 담는다.

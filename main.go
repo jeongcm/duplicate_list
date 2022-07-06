@@ -19,7 +19,7 @@ func main() {
 	}
 
 	fmt.Print("duplicate numbers: [")
-	result := list.GetDuplicateNumber(numbers)
+	result := list.GetDuplicatedNumbers(numbers)
 	l := len(result)
 	for i, v := range result {
 		fmt.Print(v)
